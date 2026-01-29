@@ -1,6 +1,22 @@
 # multihost-utils
 
-Session handoff, pickup, and permission sharing utilities for multi-host Claude Code workflows.
+Session handoff, pickup, and permission sharing utilities for multi-host Claude Code workflows. Alpha quality.
+
+## `/handoff` and `/pickup`
+
+Why would you need this plugin? Let's say you want to work on your local laptop environment on a Claude Code task, but then migrate it to a remote host so that it can continue to progress while you close your laptop and leave. For this purpose, you can use the `/handoff` command and the corresponding `/pickup` command on the remote host. Then ensure session persistence, for example by using `tmux`, and close your laptop while Claude Code continues to execute. 
+
+## `permission-share` and `permission-share-user-level`
+
+Why the permission sharing utilities? After you've been developing for some time in a local repo, you will have accumulated a large number of decisions about what permissions to allow, deny, or always ask for in your repo `.claude/settings.local.json` file.
+
+If you later check out that repo in another location, or for example, migrate it to another host with the handoff and pickoff commands listed above, all of those local permission decisions will no longer be in effect.
+
+Likewise, if one of your teammates checks out the repo, they will not have the benefit of your permission decisions, and vice versa.
+
+The `/permission-share` command will look at your `[repository]/.claude/settings.local.json` file, identify permissions that it would recommend you port to the repo-level `[repository]/.claude/settings.json` file in order to add them to version control and enable sharing with other checked out copies of the repo.
+
+Similarly, the `permission-share-user-level` command will inspect your repo's `settings.json` file and identify permissions that it recommends adding to your user-level `~/.claude/settings.json` file to be shared across repos.
 
 ## Installation
 
@@ -20,7 +36,7 @@ cd ~/git/multihost-utils
 
 ### Via claude-code-dotfiles
 
-If you use [claude-code-dotfiles](https://github.com/jknoll/claude-code-dotfiles), multihost-utils is automatically cloned and installed when you run `./install.sh` or `./update.sh`.
+If you use [claude-code-dotfiles](https://github.com/jknoll/claude-code-dotfiles), multihost-utils is automatically cloned and installed when you run `./install.sh` or `./update.sh`. You can fork this repo and create your own set of `.claude/*` files and user-level `CLAUDE.md`.
 
 ## Commands
 
