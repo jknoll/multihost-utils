@@ -1,0 +1,13 @@
+{
+  "name": "multihost-utils",
+  "version": "1.0.0",
+  "description": "Session handoff, pickup, and permission sharing utilities for multi-host Claude Code workflows",
+  "author": {
+    "name": "Justin Knoll",
+    "url": "https://github.com/jknoll"
+  },
+  "repository": "https://github.com/jknoll/multihost-utils",
+  "license": "MIT",
+  "keywords": ["handoff", "pickup", "permissions", "multihost", "session"],
+  "commands": "./commands/"
+}
