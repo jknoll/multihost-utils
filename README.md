@@ -36,7 +36,7 @@ cd ~/git/multihost-utils
 
 ### Via claude-code-dotfiles
 
-If you use [claude-code-dotfiles](https://github.com/jknoll/claude-code-dotfiles), multihost-utils is automatically cloned and installed when you run `./install.sh` or `./update.sh`. You can fork this repo and create your own set of `.claude/*` files and user-level `CLAUDE.md`.
+If you use [claude-code-dotfiles](https://github.com/jknoll/claude-code-dotfiles)(note: currently a private repo, I may create an empty-config snapshot and make it public), multihost-utils is automatically cloned and installed when you run `./install.sh` or `./update.sh`. You can fork this repo and create your own set of `.claude/*` files and user-level `CLAUDE.md`.
 
 ## Commands
 
