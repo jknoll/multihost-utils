@@ -23,7 +23,14 @@ Similarly, the `permission-share-user-level` command will inspect your repo's `s
 ### Via Claude Code Plugin System
 
 ```bash
-claude plugin install github:jknoll/multihost-utils
+/plugin marketplace add jknoll/multihost-utils
+/plugin install multihost-utils@multihost-utils
+```
+
+Or using the CLI:
+```bash
+claude plugin marketplace add jknoll/multihost-utils
+claude plugin install multihost-utils@multihost-utils
 ```
 
 ### Manual Installation
